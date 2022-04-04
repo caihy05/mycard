@@ -138,4 +138,7 @@ if __name__ == '__main__':
         elif cmd == "x":
             stop()
         else:
+            # pwmA.stop()
+            # pwmB.stop()
             GPIO.cleanup()
+            
