@@ -23,14 +23,14 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(ENA,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN1,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN2,GPIO.OUT,initial=GPIO.LOW)
-pwmA = GPIO.PWM(ENA,100)          #200HZ 
+pwmA = GPIO.PWM(ENA,200)          #200HZ 
 pwmA.start(20) #产生占空比为0.4的PWM信号，取值范围0-100, 默认值取0.4
 #右边
 GPIO.setup(ENB,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN3,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN4,GPIO.OUT,initial=GPIO.LOW)
 
-pwmB = GPIO.PWM(ENB,100)          #200HZ 
+pwmB = GPIO.PWM(ENB,200)          #200HZ 
 pwmB.start(20) #产生占空比为0.4的PWM信号，取值范围0-100,默认值取0.4
 
 # 前进w、后退s、左转a、右转d、加速u、减速l、刹车x|(速度20-60, 0、1、2、3、4)
