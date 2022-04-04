@@ -29,11 +29,6 @@ pwmA.start(20) #产生占空比为0.2的PWM信号，取值范围0-100, 默认值
 GPIO.setup(ENB,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN3,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN4,GPIO.OUT,initial=GPIO.LOW)
-# def init():
-
-
-pwmA = GPIO.PWM(ENA,200)          #200HZ 
-pwmA.start(20) #产生占空比为0.2的PWM信号，取值范围0-100, 默认值取0.2
 
 pwmB = GPIO.PWM(ENB,200)          #200HZ 
 pwmB.start(20) #产生占空比为0.2的PWM信号，取值范围0-100,默认值取0.2
