@@ -24,24 +24,24 @@ GPIO.setup(ENA,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN1,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN2,GPIO.OUT,initial=GPIO.LOW)
 pwmA = GPIO.PWM(ENA,200)          #200HZ 
-pwmA.start(40) #产生占空比为0.4的PWM信号，取值范围0-100, 默认值取0.4
+pwmA.start(20) #产生占空比为0.4的PWM信号，取值范围0-100, 默认值取0.4
 #右边
 GPIO.setup(ENB,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN3,GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(IN4,GPIO.OUT,initial=GPIO.LOW)
 
 pwmB = GPIO.PWM(ENB,200)          #200HZ 
-pwmB.start(40) #产生占空比为0.4的PWM信号，取值范围0-100,默认值取0.4
+pwmB.start(20) #产生占空比为0.4的PWM信号，取值范围0-100,默认值取0.4
 
 # 前进w、后退s、左转a、右转d、加速u、减速l、刹车x|(速度20-60, 0、1、2、3、4)
 # 前进w
 def forward():
     print("前进w")
     # 前进修改占空比为默认0.4的PWM信号
-#    pwmA.ChangeDutyCycle(0.4)
+    # pwmA.ChangeDutyCycle(20)
     GPIO.output(IN1,True)
     GPIO.output(IN2,False)
-#    pwmB.ChangeDutyCycle(0.4)
+    # pwmB.ChangeDutyCycle(0.4)
     GPIO.output(IN3,True)
     GPIO.output(IN4,False)
 
@@ -81,17 +81,17 @@ def right():
 #    pwmB.ChangeDutyCycle(0.4)
     GPIO.output(IN3,False)
     GPIO.output(IN4,True)
-# 加速u
+# 加速u、高速
 def upSpeed():
     print("加速u")
-    pwmA.ChangeDutyCycle(0.2+0.1)
-    pwmB.ChangeDutyCycle(0.2+0.1) 
+    pwmA.ChangeDutyCycle(40)
+    pwmB.ChangeDutyCycle(40) 
 
-# 减速l
+# 减速l、低速
 def lowSpeed():
     print("减速l")
-    pwmA.ChangeDutyCycle(0.2-0.1)
-    pwmB.ChangeDutyCycle(0.2-0.1) 
+    pwmA.ChangeDutyCycle(20)
+    pwmB.ChangeDutyCycle(20) 
 
 
 # class XiaocheHandler(tornado.web.RequestHandler):
@@ -138,4 +138,4 @@ if __name__ == '__main__':
         elif cmd == "x":
             stop()
         else:
-            pass
+            GPIO.cleanup()
