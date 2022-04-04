@@ -20,17 +20,17 @@ IN4 = 15	#//电机接口4
 
 # 初始化
 GPIO.setmode(GPIO.BOARD)
-def init():
-    # GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(ENA,GPIO.OUT,initial=GPIO.LOW)
-    GPIO.setup(IN1,GPIO.OUT,initial=GPIO.LOW)
-    GPIO.setup(IN2,GPIO.OUT,initial=GPIO.LOW)
-    pwmA = GPIO.PWM(ENA,200)          #200HZ 
-    pwmA.start(20) #产生占空比为0.2的PWM信号，取值范围0-100, 默认值取0.2
-    #右边
-    GPIO.setup(ENB,GPIO.OUT,initial=GPIO.LOW)
-    GPIO.setup(IN3,GPIO.OUT,initial=GPIO.LOW)
-    GPIO.setup(IN4,GPIO.OUT,initial=GPIO.LOW)
+GPIO.setup(ENA,GPIO.OUT,initial=GPIO.LOW)
+GPIO.setup(IN1,GPIO.OUT,initial=GPIO.LOW)
+GPIO.setup(IN2,GPIO.OUT,initial=GPIO.LOW)
+pwmA = GPIO.PWM(ENA,200)          #200HZ 
+pwmA.start(20) #产生占空比为0.2的PWM信号，取值范围0-100, 默认值取0.2
+#右边
+GPIO.setup(ENB,GPIO.OUT,initial=GPIO.LOW)
+GPIO.setup(IN3,GPIO.OUT,initial=GPIO.LOW)
+GPIO.setup(IN4,GPIO.OUT,initial=GPIO.LOW)
+# def init():
+
 
 pwmA = GPIO.PWM(ENA,200)          #200HZ 
 pwmA.start(20) #产生占空比为0.2的PWM信号，取值范围0-100, 默认值取0.2
