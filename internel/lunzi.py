@@ -95,49 +95,47 @@ def lowSpeed():
 
 
 # class XiaocheHandler(tornado.web.RequestHandler):
-class XiaocheHandler(tornado.web.RequestHandler):
-    def get(self):
-            self.render("xiaoche.html")
-    def post(self):
-            # init()
-            # sleep_time=0.1
-            arg=self.get_argument('k')
-            # arg=self.get_argument('k')
-            if(arg=='w'):
-                forward()
-            elif(arg=='s'):
-                back()
-            elif(arg=='a'):
-                left()
-            elif(arg=='d'):
-                right()
-            elif(arg=='x'):
-                stop()
-            elif(arg=='u'):
-                upSpeed()
-            elif(arg=='l'):
-                lowSpeed()
-            else:
-                return False
-            self.write(arg)
+    # def get(self):
+    #         self.render("xiaoche.html")
+    # def post(self):
+    #         # init()
+    #         # sleep_time=0.1
+    #         arg=self.get_argument('k')
+    #         # arg=self.get_argument('k')
+    #         if(arg=='w'):
+    #             forward()
+    #         elif(arg=='s'):
+    #             back()
+    #         elif(arg=='a'):
+    #             left()
+    #         elif(arg=='d'):
+    #             right()
+    #         elif(arg=='x'):
+    #             stop()
+    #         elif(arg=='u'):
+    #             upSpeed()
+    #         elif(arg=='l'):
+    #             lowSpeed()
+    #         else:
+    #             return False
+    #         self.write(arg)
 if __name__ == '__main__':
     # pass
     while 1:
-        xc = XiaocheHandler()
         cmd = input('前进w、后退s、左转a、右转d、变速u、刹车x')
         if cmd == "w":
-            xc.forward()
+            forward()
         elif cmd == "s":
-            xc.back()
+            back()
         elif cmd == "a": 
-            xc.left()
+            left()
         elif cmd == "d":
-            xc.right()
+            right()
         elif cmd == "u":
-            xc.upSpeed()
+            upSpeed()
         elif cmd == "l":
-            xc.lowSpeed()
+            lowSpeed()
         elif cmd == "x":
-            xc.stop()
+            stop()
         else:
             pass
