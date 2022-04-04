@@ -67,8 +67,8 @@ def stop():
 def left():
     print("左转a")
 #    pwmA.ChangeDutyCycle(0.4)
-    # GPIO.output(IN1,False)
-    # GPIO.output(IN2,True)
+    GPIO.output(IN1,False)
+    GPIO.output(IN2,True)
 #    pwmB.ChangeDutyCycle(0.4)
     GPIO.output(IN3,True)
     GPIO.output(IN4,False)
@@ -79,8 +79,8 @@ def right():
     GPIO.output(IN1,True)
     GPIO.output(IN2,False)
 #    pwmB.ChangeDutyCycle(0.4)
-    # GPIO.output(IN3,False)
-    # GPIO.output(IN4,True)
+    GPIO.output(IN3,False)
+    GPIO.output(IN4,True)
 # 加速u
 def upSpeed():
     print("加速u")
