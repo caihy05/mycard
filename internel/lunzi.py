@@ -99,7 +99,7 @@ class XiaocheHandler(tornado.web.RequestHandler):
     def get(self):
             self.render("xiaoche.html")
     def post(self):
-            init()
+            # init()
             # sleep_time=0.1
             arg=self.get_argument('k')
             # arg=self.get_argument('k')
