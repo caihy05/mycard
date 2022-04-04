@@ -38,10 +38,10 @@ pwmB.start(40) #产生占空比为0.4的PWM信号，取值范围0-100,默认值�
 def forward():
     print("前进w")
     # 前进修改占空比为默认0.4的PWM信号
-    pwmA.ChangeDutyCycle(0.4)
+#    pwmA.ChangeDutyCycle(0.4)
     GPIO.output(IN1,True)
     GPIO.output(IN2,False)
-    pwmB.ChangeDutyCycle(0.4)
+#    pwmB.ChangeDutyCycle(0.4)
     GPIO.output(IN3,True)
     GPIO.output(IN4,False)
 
@@ -49,10 +49,10 @@ def forward():
 def back():
     print("后退s")
     # 前进修改占空比为默认0.4的PWM信号
-    pwmA.ChangeDutyCycle(0.4)
+#    pwmA.ChangeDutyCycle(0.4)
     GPIO.output(IN1,False)
     GPIO.output(IN2,True)
-    pwmB.ChangeDutyCycle(0.4)
+#    pwmB.ChangeDutyCycle(0.4)
     GPIO.output(IN3,False)
     GPIO.output(IN4,True)
 # 刹车x
@@ -66,19 +66,19 @@ def stop():
 # 左转a
 def left():
     print("左转a")
-    pwmA.ChangeDutyCycle(0.4)
+#    pwmA.ChangeDutyCycle(0.4)
     GPIO.output(IN1,False)
     GPIO.output(IN2,True)
-    pwmB.ChangeDutyCycle(0.4)
+#    pwmB.ChangeDutyCycle(0.4)
     GPIO.output(IN3,True)
     GPIO.output(IN4,False)
 # 右转d
 def right():
     print("右转d")
-    pwmA.ChangeDutyCycle(0.4)
+#    pwmA.ChangeDutyCycle(0.4)
     GPIO.output(IN1,True)
     GPIO.output(IN2,False)
-    pwmB.ChangeDutyCycle(0.4)
+#    pwmB.ChangeDutyCycle(0.4)
     GPIO.output(IN3,False)
     GPIO.output(IN4,True)
 # 加速u
