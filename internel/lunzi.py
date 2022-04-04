@@ -19,8 +19,9 @@ IN3 = 13	#//电机接口3
 IN4 = 15	#//电机接口4
 
 # 初始化
+GPIO.setmode(GPIO.BOARD)
 def init():
-    GPIO.setmode(GPIO.BOARD)
+    # GPIO.setmode(GPIO.BOARD)
     GPIO.setup(ENA,GPIO.OUT,initial=GPIO.LOW)
     GPIO.setup(IN1,GPIO.OUT,initial=GPIO.LOW)
     GPIO.setup(IN2,GPIO.OUT,initial=GPIO.LOW)
