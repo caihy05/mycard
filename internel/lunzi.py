@@ -67,8 +67,8 @@ def stop():
 def left():
     print("左转a")
 #    pwmA.ChangeDutyCycle(0.4)
-    GPIO.output(IN1,False)
-    GPIO.output(IN2,True)
+    # GPIO.output(IN1,False)
+    # GPIO.output(IN2,True)
 #    pwmB.ChangeDutyCycle(0.4)
     GPIO.output(IN3,True)
     GPIO.output(IN4,False)
@@ -79,19 +79,19 @@ def right():
     GPIO.output(IN1,True)
     GPIO.output(IN2,False)
 #    pwmB.ChangeDutyCycle(0.4)
-    GPIO.output(IN3,False)
-    GPIO.output(IN4,True)
+    # GPIO.output(IN3,False)
+    # GPIO.output(IN4,True)
 # 加速u
 def upSpeed():
     print("加速u")
-    pwmA.ChangeDutyCycle(0.4+0.1)
-    pwmB.ChangeDutyCycle(0.4+0.1) 
+    pwmA.ChangeDutyCycle(0.2+0.1)
+    pwmB.ChangeDutyCycle(0.2+0.1) 
 
 # 减速l
 def lowSpeed():
     print("减速l")
-    pwmA.ChangeDutyCycle(0.4-0.1)
-    pwmB.ChangeDutyCycle(0.4-0.1) 
+    pwmA.ChangeDutyCycle(0.2-0.1)
+    pwmB.ChangeDutyCycle(0.2-0.1) 
 
 
 # class XiaocheHandler(tornado.web.RequestHandler):
