@@ -94,6 +94,7 @@ def lowSpeed():
     pwmB.ChangeDutyCycle(0.2-0.1) 
 
 
+# class XiaocheHandler(tornado.web.RequestHandler):
 class XiaocheHandler(tornado.web.RequestHandler):
     def get(self):
             self.render("xiaoche.html")
